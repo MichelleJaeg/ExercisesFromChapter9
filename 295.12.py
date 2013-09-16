@@ -1,4 +1,5 @@
 import random
+
 def main (numtrials):
 
     #Introduction
@@ -11,13 +12,13 @@ def main (numtrials):
 
     #Simulation
     for i in range(numtrials):
-        stepsaway=0
-        start=0
+        stepsaway = 0
+        position = 0
         for i in range(n):
-            step=random.choice([-1,1])
-            start+=step
-        stepsaway+=abs(start-0)
-    averagestepsaway=n//stepsaway
+            step = random.choice([-1,1])
+            position += step
+        stepsaway += abs(position)
+    averagestepsaway = n//stepsaway
 
     #Report results
     print ("\nThe average distance from the starting point was:", averagestepsaway, "steps.")
