@@ -9,16 +9,16 @@ def main ():
     print ("and the cabinet.")
 
     #Get input
-    n=eval(input("\nPlease enter how many darts to throw. More darts=greater accuracy. "))
+    n = eval(input("\nPlease enter how many darts to throw. More darts equals greater accuracy. "))
 
     #Simulation
-    h=0
+    h = 0
     for i in range(n):
-        x=2*random()-1
-        y=2*random()-1
-        if x**2 + y**2<=1:
-            h+=1
-    pi=4*(h/n)
+        x = 2 * random() - 1
+        y = 2 * random() - 1
+        if x ** 2 + y ** 2 <= 1:
+            h += 1
+    pi = 4 * (h/n)
 
     #Print results
     print ("The simulation estimated the value of pi to be,", pi)
@@ -27,5 +27,5 @@ def main ():
 
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main ()
