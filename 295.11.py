@@ -7,21 +7,21 @@ def main (n):
     print ("five-of-a-kind in a single roll of five six-sided dice.")
 
     #Simulation
-    same=0
+    same = 0
     for i in range(n):
-        die1=randrange(1,7)
-        die2=randrange(1,7)
-        die3=randrange(1,7)
-        die4=randrange(1,7)
-        die5=randrange(1,7)
-        if die1==die2 and die2==die3 and die3==die4 and die4==die5:
-            same+=1
-    probability=same/n
+        die_1 = randrange(1, 7)
+        die_2 = randrange(1, 7)
+        die_3 = randrange(1, 7)
+        die_4 = randrange(1, 7)
+        die_5 = randrange(1, 7)
+        if die_1 == die_2 and die_2 == die_3 and die_3 == die_4 and die_4 == die_5:
+            same += 1
+    probability = same/n
 
     #Print results
     print ("\nThe probability is", probability)
 
 
 
-if __name__=='__main__':
-    main (100000)
+if __name__ == '__main__':
+    main ()
