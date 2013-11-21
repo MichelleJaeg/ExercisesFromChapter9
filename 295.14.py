@@ -1,9 +1,8 @@
-#I wrote this slightly different than was asked in the problem statement, to allow
+#This is written slightly differently than was asked in the problem statement, to allow
 # for greater visibility of the walk
 
-
 from random import random
-from graphics import*
+from graphics import *
 import math
 
 
@@ -13,25 +12,25 @@ def main ():
     print ("This program traces a random walk in two dimensions. ")
 
     #Get input
-    n=eval(input("\nHow many steps would you like the walker to take? "))
+    n = eval(input("\nHow many steps would you like the walker to take? "))
 
     #Create graphics window
-    win=GraphWin("Random Walk",  400, 400)
+    win = GraphWin("Random Walk",  400, 400)
 
    #Create random walk
-    oldpoint=Point(200,200)
-    oldpoint.draw(win)
-    x=oldpoint.getX()
-    y=oldpoint.getY()
+    old_point = Point(200, 200)
+    old_point.draw(win)
+    x = old_point.getX()
+    y = old_point.getY()
     for i in range(n):
-        angle=random() * 2 * math.pi
+        angle = random() * 2 * math.pi
         x += 5 * math.cos(angle)
-        y += 5 * math.sin (angle)
-        newpoint=Point(x,y)
-        newpoint.draw(win)
-        line=Line(oldpoint,newpoint)
+        y += 5 * math.sin(angle)
+        new_point = Point(x, y)
+        new_point.draw(win)
+        line = Line(old_point, new_point)
         line.draw(win)
-        oldpoint=newpoint
+        old_point = new_point
 
     #Close window
     win.getMouse()
@@ -39,5 +38,5 @@ def main ():
 
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main ()
